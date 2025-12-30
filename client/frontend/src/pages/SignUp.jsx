@@ -10,7 +10,7 @@ export default function Signup() {
 
   const submit = async (e) => {
     e.preventDefault();
-    const data = await apiRequest("/auth/register", "POST", form);
+    const data = await apiRequest("/auth/signup", "POST", form);
     if (data.token) {
       login(data);
       navigate("/");
