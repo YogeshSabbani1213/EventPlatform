@@ -3,7 +3,7 @@ import { apiRequest } from "../services/api";
 import { AuthContext } from "../context/AuthContext";
 import { useNavigate } from "react-router-dom";
 
-export default function Signup() {
+export default function SignUp() {
   const [form, setForm] = useState({ username: "", email: "", password: "" });
   const { login } = useContext(AuthContext);
   const navigate = useNavigate();
