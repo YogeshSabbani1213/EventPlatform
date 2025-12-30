@@ -7,7 +7,7 @@ export default async function registerUser(req, res) {
 
         const { username, email, password } = req.body;
         if (!username || !email || !password) {
-            return res.status(400).json({ message: 'All fields are required'});
+            return res.status(400).json({ message: 'All fields are required' });
         }
 
         const userexists = await UserModel.findOne({ email });
@@ -39,6 +39,10 @@ export async function loginUser(req, res) {
             return res.status(400).json({ message: 'Invalid email or password' });
         }
         const user = await UserModel.findOne({ email });
+        if (!user || !user.password) {
+            return res.status(400).json({ message: "Invalid email or password" });
+        }
+
         if (!user) {
             return res.status(400).json({ message: 'Invalid email or password' });
         }
@@ -48,7 +52,8 @@ export async function loginUser(req, res) {
             return res.status(404).json({ message: 'password is incorrect' })
         }
 
-        return res.status(200).json({message:'login sucessful',
+        return res.status(200).json({
+            message: 'login sucessful',
             id: user._id,
             username: user.username,
             email: user.email,
@@ -56,7 +61,7 @@ export async function loginUser(req, res) {
         })
     }
     catch (error) {
-        return res.status(500).json({ message:'login unsuccesful',error:error.message});
+        return res.status(500).json({ message: 'login unsuccesful', error: error.message });
     }
 }
 
