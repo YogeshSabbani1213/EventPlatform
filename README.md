@@ -1,6 +1,4 @@
-Here is a professional, ready-to-use **README.md** file for your project. You can create a file named `README.md` in the root of your GitHub repository and paste this content directly.
 
----
 
 # Mini Event Platform - MERN Stack
 
