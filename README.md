@@ -4,7 +4,7 @@
 
 A full-stack web application that allows users to create, view, and RSVP to events. Built as a technical assessment for the Full Stack Developer Intern role, this project demonstrates proficiency in the MERN stack (MongoDB, Express, React, Node.js), secure authentication, and handling concurrency in booking systems.
 
-**Deployed Application:** [INSERT YOUR RENDER/VERCEL LINK HERE]
+**Deployed Application:** 'https://event-platform-chi-neon.vercel.app/'
 
 ---
 
